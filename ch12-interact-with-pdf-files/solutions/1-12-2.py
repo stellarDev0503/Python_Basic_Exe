@@ -5,7 +5,7 @@
 # Add a cover sheet to a PDF; save the full output as a new PDF
 
 import os
-from pyPDF import PdfFileReader, PdfFileWriter
+from pyPDF2 import PdfFileReader, PdfFileWriter
 
 path = "C:/Real Python/Course materials/Chapter 12/Practice files"
 
