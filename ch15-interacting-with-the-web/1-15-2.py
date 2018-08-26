@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 
 # Exercise 1
 # Get the full HTML from the "profiles" page
-base_URL = "http://olympus.realpython.org"
-address = base_URL + "/profiles"
+base_URL = "https://realpython.com/practice/"
+address = base_URL + "profiles.html"
 html_page = urlopen(address)
 html_text = html_page.read().decode('utf-8')
 soup = BeautifulSoup(html_text)
