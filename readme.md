@@ -1,1 +1,1 @@
-Course materials for Real Python Course 1: *Introduction to Python*
+# Exercises [Real Python's](https://realpython.com) *Python Basics: A Practical Introduction to Python 3* book
