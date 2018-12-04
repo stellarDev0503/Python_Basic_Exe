@@ -1,4 +1,4 @@
-# 3.3 - Store a Variable
+# 3.3 - Create a Variable
 # Solutions to review exercies
 
 
