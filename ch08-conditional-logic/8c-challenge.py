@@ -1,5 +1,5 @@
-# 8.9 - Challenge: Simulate a Coin Toss Experiment
-# Solution to challenge
+# 8.8 - Challenge: Simulate a Coin Toss Experiement
+# Alternative solution to challenge using functions
 
 
 # Simulate the results of a series of coin tosses and track the results
@@ -14,18 +14,24 @@
 
 from random import randint
 
-flips = 0
-trials = 10000
 
-for trial in range(0, trials):
-    flips += 1  # first flip
-    if randint(0, 1) == 0:  # flipped tails on first flip
-        while randint(0, 1) == 0:  # keep flipping tails
-            flips += 1
-        flips += 1  # finally flipped heads
-    else:  # otherwise, flipped heads on first flip
-        while randint(0, 1) == 1:  # keep flipping heads
-            flips += 1
-        flips += 1  # finally flipped tails
+def single_trial():
+    toss = randint(0, 1)
+    total_flips = 1
 
-print(flips / trials)
+    while toss == randint(0, 1):
+        total_flips += 1
+        toss = randint(0, 1)
+
+    total_flips += 1
+    return total_flips
+
+
+def flip_trial_avg(num_trials):
+    total = 0
+    for trial in range(num_trials):
+        total += single_trial()
+    return total / num_trials
+
+
+print(f"The average number of coin flips was {flip_trial_avg(10000)}")
