@@ -25,19 +25,18 @@ class GoldenRetriever(Dog):
 
 
 # Exercise 2
-# Rectangle and Square classes
-class Rectangle:
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+# Modified Dog class
+class Dog:
+    species = "Canis familiaris"
 
-    def area(self):
-        return self.length * self.width
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
 
-class Square(Rectangle):
-    def __init__(self, side_length):
-        super().__init__(side_length, side_length)
-
-square = Square(4)
-print(square.area())
+    def speak(self, sound):
+        if not isinstance(sound, str):
+            raise TypeError("sound should be a string")
+        return f"{self.name} says {sound}"
