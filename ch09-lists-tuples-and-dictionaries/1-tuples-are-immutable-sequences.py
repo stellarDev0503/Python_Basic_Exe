@@ -13,7 +13,7 @@ print(cardinal_numbers[1])
 
 
 # Exercise 3
-# Unpack the tuple into three strings and display them
+# unpack the tuple into three string and display them
 position1, position2, position3 = cardinal_numbers
 print(position1)
 print(position2)
